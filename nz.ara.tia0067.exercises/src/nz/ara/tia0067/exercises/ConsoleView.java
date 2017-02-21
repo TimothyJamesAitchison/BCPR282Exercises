@@ -2,7 +2,7 @@ package nz.ara.tia0067.exercises;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ConsoleView implements View{
+public class ConsoleView implements IView{
 	@Override
 	public String get(){
 		String input;

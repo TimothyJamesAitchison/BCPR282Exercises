@@ -3,20 +3,23 @@ import java.io.IOException;
 //import java.util.Scanner;
 
 public class Controller {
-	protected View myView;
-	private String data;
-	public Controller(View theView){
+	protected IView myView;
+	public Controller(IView theView){
 		this.myView = theView;
 	}
 	
 	public void go(){
 		this.myView.start();
-		data = this.myView.get();
-		this.myView.say(this.data);
+		String result = this.doExercise();
+		System.out.println(result);
 		try{
 			this.myView.stop();
 		}catch (IOException e){
 			e.printStackTrace();
 		}
+	}
+	
+	public String doExercise(){
+		return "undefined";
 	}
 }
