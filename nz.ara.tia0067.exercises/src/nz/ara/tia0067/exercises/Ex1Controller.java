@@ -7,12 +7,12 @@ public class Ex1Controller extends Controller{
 	}
 	
 	@Override
-	public void go(){
+	public String doExercise(){
 		this.myView.start();
 		String data = this.myView.get();
 		int intData = Integer.parseInt(data);
 		Model theModel = new Model();
 		String result = theModel.checkMark(intData);
-		System.out.println("Your grade is: " + result);
+		return result;
 	}
 }

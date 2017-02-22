@@ -7,12 +7,12 @@ public class Ex2Controller extends Controller{
 	}
 	
 	@Override
-	public void go(){
+	public String doExercise(){
 		this.myView.start();
 		String data = this.myView.get();
 		int intData = Integer.parseInt(data);
 		Model theModel = new Model();
-		String result = theModel.checkNumber(intData);
-		System.out.println("The number is a(n): " + result);
+		String result = "The number is a(n): " + theModel.checkNumber(intData);
+		return result;
 	}
 }

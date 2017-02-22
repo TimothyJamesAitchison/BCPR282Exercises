@@ -7,12 +7,12 @@ public class Ex3bController extends Controller{
 	}
 	
 	@Override
-	public void go(){
+	public String doExercise(){
 		this.myView.start();
 		String data = this.myView.get();
 		int intData = Integer.parseInt(data);
 		Model theModel = new Model();
 		String result = theModel.printWordFooBar(intData);
-		System.out.println(result);
+		return result;
 	}
 }
